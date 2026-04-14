@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "CANable",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/build/canable-9fddea4-dirty.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "svdFile": "${workspaceRoot}/STM32G474xx.svd",
+            "configFiles": [
+                "stm32f0x.cfg"
+            ],
+            "runToEntryPoint": "main",
+            "liveWatch": {
+                "enabled":true,
+                "samplesPerSecond":5
+            },
+            "preLaunchTask": "rebuild"
+        }
+    ]
+}
